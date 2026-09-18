@@ -460,3 +460,19 @@ mark.token{background:rgba(229,99,60,.18); color:#8a2f12; padding:.05rem .35rem;
 .prose .related ul{list-style:none; padding:0; margin-top:.35rem; display:flex; flex-wrap:wrap; gap:0 1.5rem}
 .related a{display:inline-flex; align-items:center; min-height:44px; font-weight:600}
 @media (min-width:700px){ .prose.city .related{grid-template-columns:repeat(2, minmax(0,1fr)); gap:3rem} }
+
+/* ---------- Refinements (2026-09-18) ---------- */
+/* Every concern tile the same height, whatever its label length */
+.tiles{grid-auto-rows:1fr}
+.tiles .tile{height:100%}
+/* Storm table caption */
+.prose .tcap{font-size:.94rem; color:var(--muted); margin-bottom:.6rem}
+.tcap a{display:inline-flex; align-items:center; min-height:44px}
+/* Phone storm cards: keep labels readable */
+@media (max-width:700px){ .prose td[data-label]::before{font-size:.88rem} }
+/* Less air between the related links and the footer */
+.city-body{padding-bottom:clamp(1.5rem, 2.5vw, 2.25rem)}
+.city-body + footer, main + footer{padding-top:1.5rem}
+
+/* Phones: breathing room between an explanation and its data */
+@media (max-width:959px){ .cmod.split .c-data{margin-top:1.1rem} }

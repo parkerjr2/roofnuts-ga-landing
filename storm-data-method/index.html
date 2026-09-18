@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Reroofing &amp; Historic Rules in Augusta | RoofNuts</title>
-<meta name="description" content="Augusta reroofing requires a city permit; Downtown, Olde Town, and Summerville historic districts have separate review; North Augusta is SC.">
+<title>How RoofNuts Estimates Local Storm Exposure | RoofNuts</title>
+<meta name="description" content="How the storm tables on RoofNuts city pages are built: data source, hail and wind thresholds, what &quot;share of homes&quot; means, quality checks, and limits.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&family=Barlow+Condensed:wght@800&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
 <link rel="manifest" href="/roofnuts-ga-landing/site.webmanifest">
 <meta name="theme-color" content="#031B31">
 <link rel="stylesheet" href="/roofnuts-ga-landing/assets/site.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "/roofnuts-ga-landing/"}, {"@type": "ListItem", "position": 2, "name": "Locations", "item": "/roofnuts-ga-landing/locations/"}, {"@type": "ListItem", "position": 3, "name": "Roofing Help in Augusta, GA", "item": "/roofnuts-ga-landing/locations/augusta/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "/roofnuts-ga-landing/"}, {"@type": "ListItem", "position": 2, "name": "How RoofNuts Estimates Local Storm Exposure", "item": "/roofnuts-ga-landing/storm-data-method/"}]}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -50,12 +50,82 @@
 
 
 <main id="main">
-<section class="page-hero with-form"><div class="wrap"><div><nav class="crumbs" aria-label="Breadcrumb"><a href="/roofnuts-ga-landing/">Home</a><span aria-hidden="true">›</span><a href="/roofnuts-ga-landing/locations/">Locations</a><span aria-hidden="true">›</span><span>Augusta</span></nav><h1>Roofing Help in Augusta, GA</h1><div class="intro"><p>Request a roof inspection, repair, or replacement in Augusta. RoofNuts is a referral service: your request goes to one participating roofing contractor serving your ZIP.</p><p>Tell us what you have noticed and your ZIP code. The contractor contacts you to arrange a visit, and you decide what, if anything, to do next.</p></div></div><form class="form-card" id="roof-request" data-preselect="" novalidate autocomplete="on" aria-labelledby="form-title">
+<section class="page-hero text-only">
+  <div class="wrap">
+    <div>
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/roofnuts-ga-landing/">Home</a><span aria-hidden="true">›</span><span>Storm Data Method</span></nav>
+      <h1>How RoofNuts Estimates Local Storm Exposure</h1>
+      <div class="intro"><p>Each RoofNuts city page includes a short table of recent hail days. This page explains where those numbers come from, how to read them, and what they cannot tell you.</p>
+</div>
+    </div>
+    
+  </div>
+</section><div class="prose-wrap"><div class="wrap"><article class="prose"><h2>What the numbers are</h2>
+<p>The figures are radar-based estimates of hail size and wind gusts, summarized by neighborhood. They describe what passed over an area. They are not reports from anyone's roof, and they are not a damage assessment.</p>
+<p>RoofNuts uses the same storm data that roofing contractors use on the RoofNuts platform to see where severe weather has been.</p>
+<h2>The thresholds we use</h2>
+<table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>Threshold</th>
+<th>Why this number</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="
+
+Measure">Hail day</td>
+<td data-label="Threshold">Estimated hail of 1.00 inch or more</td>
+<td data-label="Why this number">The National Weather Service classifies hail of one inch or more as severe</td>
+</tr>
+<tr>
+<td data-label="
+
+Measure">Wind day</td>
+<td data-label="Threshold">Estimated gusts of 58 mph or more</td>
+<td data-label="Why this number">The National Weather Service classifies thunderstorm gusts of 58 mph or more as severe</td>
+</tr>
+<tr>
+<td data-label="
+
+Measure">Notable day</td>
+<td data-label="Threshold">The storm reached at least 5% of the city's homes</td>
+<td data-label="Why this number">Separates a widespread event from an isolated cell</td>
+</tr>
+</tbody>
+</table>
+<h2>What &quot;share of homes in the path&quot; means</h2>
+<p>For each storm date, we add up the homes in the neighborhoods where the estimate met the threshold, then divide by all the homes we have on record for that city. A city here means the mailing city in property records, which can extend beyond the official city limits.</p>
+<p>A share of 30% means the storm's estimated severe footprint covered neighborhoods holding about 30% of the city's recorded homes. It does not mean 30% of roofs were damaged. Hail varies street by street, and many roofs inside a storm's path are unaffected.</p>
+<h2>Which days appear in the table</h2>
+<p>A city page states the total number of qualifying hail days in the period, then shows up to four of them: the days that reached the largest share of the city's homes. Days that reached less than 2% of homes are counted in the total but not listed.</p>
+<p>The period covers the most recent 24 months of data available when the page was built. The dates are shown on each city page.</p>
+<h2>Quality checks</h2>
+<p>Radar estimates can be wrong, so we check them before publishing.</p>
+<ul>
+<li>Hail readings that arrive without a supporting probability value are compared against National Weather Service Storm Prediction Center storm reports for Georgia on the same and prior day. Readings with no matching report are dropped. This removed several false winter readings, including one during a snowstorm.</li>
+<li>Wind days with physically implausible values and no matching National Weather Service report are dropped.</li>
+<li>Several of the largest storm dates were checked against Storm Prediction Center reports in the same counties and matched.</li>
+<li>Where we hold too few property records to describe a city reliably, the storm table is left off that city's page.</li>
+</ul>
+<h2>What this cannot tell you</h2>
+<ul>
+<li>Whether your roof was hit, or damaged. Only an inspection of the roof can show that.</li>
+<li>What happened at a single address. The estimates describe neighborhoods.</li>
+<li>Anything about storms before the period shown.</li>
+</ul>
+<p>If a storm passed over your area and you have noticed a change, <a href="/roofnuts-ga-landing/guides/roof-storm-damage-next-steps/">what to do after a storm</a> explains sensible next steps. You can also <a href="/roofnuts-ga-landing/#roof-request">request an inspection</a> and mention the date.</p>
+</article></div></div><section class="band-form">
+  <div class="wrap">
+    <div><h2>Tell us what your roof needs</h2><p>Three short steps. Your request goes to one participating roofing contractor serving your ZIP, and they contact you to arrange a visit.</p></div>
+    <form class="form-card" id="roof-request" data-preselect="" novalidate autocomplete="on" aria-labelledby="form-title">
       <div class="form-head">
         <h2 id="form-title">Request an inspection</h2>
         <span class="form-step-label" id="step-label" aria-live="polite">Step 1 of 3</span>
       </div>
-      <input type="hidden" name="page_path" id="page_path" value="/locations/augusta/"><input type="hidden" name="page_city" id="page_city" value="Augusta">
+      <input type="hidden" name="page_path" id="page_path" value="/storm-data-method/"><input type="hidden" name="page_city" id="page_city" value="">
       <div class="progress" aria-hidden="true"><span class="done" id="p1"></span><span id="p2"></span><span id="p3"></span></div>
 
       <fieldset class="step active" data-step="1">
@@ -144,9 +214,9 @@
         <p style="color:var(--muted);margin-top:.5rem">One participating contractor will contact you at the number you gave to arrange a visit.</p>
         <div class="demo-note"><strong>Demo mode.</strong> Nothing was sent. Payload the real build would post: <code id="payload"></code></div>
       </div>
-    </form></div></section><section class="cov-strip" aria-label="Augusta coverage"><div class="wrap"><p><strong>We take requests from every Augusta ZIP code</strong> for <a href="/roofnuts-ga-landing/roof-inspections/">inspections</a>, <a href="/roofnuts-ga-landing/roof-repair/">repair</a>, and <a href="/roofnuts-ga-landing/roof-replacement/">replacement</a>. Contractor availability is confirmed after you submit.</p><ul class="zips" aria-label="Augusta ZIP codes"><li>30906</li><li>30909</li><li>30904</li><li>30901</li><li>30907</li></ul></div></section><div class="city-body"><div class="wrap"><article class="prose city"><section class="cmod split storms"><div class="c-text"><h2>Recent storms over Augusta</h2><p>Between Sep 12, 2024 and Sep 12, 2026, RoofNuts storm data shows 5 days with estimated hail of one inch or more somewhere in Augusta. 1 of those days reached at least 5% of Augusta homes.</p><p>Estimated gusts of 58 mph or more reached at least 5% of Augusta homes on 6 days in the same period.</p><p>The NWS September 2024 Augusta-area climate summary documents Helene's effects in the region, but that's a historical example, not a statement about the current condition of any particular roof — see the <a href="https://www.weather.gov/cae/Sep2024ClimoSummary">NWS September 2024 summary</a>.</p>
-<p class="fine">These are radar-based estimates of what passed over the area, not findings about any roof. Only an inspection can show whether a roof was affected. See <a href="/roofnuts-ga-landing/guides/roof-storm-damage-next-steps/">what to do after a storm</a>.</p></div><div class="c-data"><p class="tcap">The 2 hail days that reached the most Augusta homes, out of 5 in the period. <a href="/roofnuts-ga-landing/storm-data-method/">How these estimates are made</a></p><table><thead><tr><th>Date</th><th>Estimated hail</th><th>Share of Augusta homes in the path</th></tr></thead><tbody><tr><td data-label="Date">May 30, 2025</td><td data-label="Estimated hail">up to 1.50 in</td><td data-label="Share of Augusta homes in the path">13%</td></tr><tr><td data-label="Date">Jun 29, 2026</td><td data-label="Estimated hail">up to 1.50 in</td><td data-label="Share of Augusta homes in the path">3%</td></tr></tbody></table></div></section><section class="cmod split permits"><div class="c-text"><h2>Permits and historic review in Augusta</h2><p>Augusta's permit FAQ lists reroofing as permit-required work, and homes in the Downtown, Olde Town, or Summerville historic districts face separate review before material changes.</p><p class="fine">Confirm requirements for your own parcel with the office shown. Statewide codes and regional weather resources are on the <a href="/roofnuts-ga-landing/locations/">Georgia locations page</a>.</p></div><div class="c-data"><dl class="facts-dl"><div><dt>City permits</dt><dd><a href="https://www.augustaga.gov/FAQ.asp?TID=17">Augusta permit FAQ</a></dd></div><div><dt>Reroof permits</dt><dd>The city's permit FAQ explicitly includes reroofing among projects requiring a building permit. <a href="https://www.augustaga.gov/FAQ.asp?TID=17">Source</a></dd></div><div><dt>Historic review</dt><dd>Districts named in local resources: Downtown, Olde Town, Summerville. Review body: <a href="https://www.augustaga.gov/357/Historic-Preservation">Augusta Historic Preservation</a>. Augusta publishes separate maps for these three local historic districts; confirm the applicable review before ordering a different material or changing a visible roof feature.</dd></div><div><dt>Watch out for</dt><dd>North Augusta is in South Carolina and does not use Augusta, Georgia's permit process; confirm jurisdiction for addresses in nearby communities before applying these rules.</dd></div></dl></div></section><section class="cmod split housing"><div class="c-text"><h2>When Augusta homes were built</h2><p>The largest share of Augusta homes, 66%, was built before 1980.</p><p class="fine">Based on 51,315 Augusta homes with a recorded year built. This describes the homes, not their roofs. Many roofs have been replaced since, so rely on an inspection rather than the age of the house to judge a roof.</p></div><div class="c-data"><ul class="bars" aria-label="Share of Augusta homes by year built"><li class="top" title="66% of homes with a recorded year built"><span class="lab">Before 1980</span><span class="track"><span class="bar" style="width:100%"></span></span><span class="val">66%</span></li><li class="" title="10% of homes with a recorded year built"><span class="lab">1980s</span><span class="track"><span class="bar" style="width:15%"></span></span><span class="val">10%</span></li><li class="" title="9% of homes with a recorded year built"><span class="lab">1990s</span><span class="track"><span class="bar" style="width:14%"></span></span><span class="val">9%</span></li><li class="" title="9% of homes with a recorded year built"><span class="lab">2000s</span><span class="track"><span class="bar" style="width:14%"></span></span><span class="val">9%</span></li><li class="" title="6% of homes with a recorded year built"><span class="lab">2010 or later</span><span class="track"><span class="bar" style="width:9%"></span></span><span class="val">6%</span></li></ul></div></section><section class="cmod cfaq"><h2>Augusta questions</h2><div class="qa-grid"><div><h3>Can I keep the same material on a historic roof?</h3><p>Possibly, but matching the appearance doesn't remove every approval requirement. Describe the material, scope, and any structural changes to the appropriate staff before work begins.</p>
-</div></div></section><section class="cmod close-panel"><div><h2>Ready to have your Augusta roof looked at?</h2><p>Tell us what you have noticed. Your request goes to one participating roofing contractor serving Augusta, and they contact you to arrange a visit.</p></div><a class="btn btn-yellow" data-to-form href="#roof-request">Request an inspection<span class="arrow" aria-hidden="true">→</span></a></section><nav class="cmod related" aria-label="Related pages"><div><h2>Nearby locations</h2><ul><li><a href="/roofnuts-ga-landing/locations/athens/">Athens</a></li><li><a href="/roofnuts-ga-landing/locations/">All Georgia locations</a></li></ul></div><div><h2>Homeowner guides</h2><ul><li><a href="/roofnuts-ga-landing/guides/roof-leak-what-to-do/">What to do about a roof leak</a></li><li><a href="/roofnuts-ga-landing/guides/roof-repair-vs-replacement/">Repair or replace?</a></li><li><a href="/roofnuts-ga-landing/guides/compare-roofing-estimates/">How to compare estimates</a></li></ul></div></nav></article></div></div>
+    </form>
+  </div>
+</section>
 </main>
 <footer>
   <div class="wrap">

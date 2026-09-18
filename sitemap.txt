@@ -41,4 +41,5 @@
 /roofnuts-ga-landing/roof-inspections/
 /roofnuts-ga-landing/roof-repair/
 /roofnuts-ga-landing/roof-replacement/
+/roofnuts-ga-landing/storm-data-method/
 /roofnuts-ga-landing/terms/
