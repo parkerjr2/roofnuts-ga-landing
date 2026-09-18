@@ -382,8 +382,8 @@ footer .disclose{max-width:60ch; text-wrap:pretty}
 /* Bottom form band for guide and trust pages */
 .band-form{background:var(--navy); color:var(--on-navy)}
 .band-form .wrap{display:grid; grid-template-columns:minmax(0,1fr); gap:1.25rem}
-.band-form h2{color:white}
-.band-form p{color:var(--on-navy-muted); margin-top:.75rem; max-width:34rem}
+.band-form .wrap > div:first-child h2{color:white}
+.band-form .wrap > div:first-child p{color:var(--on-navy-muted); margin-top:.75rem; max-width:34rem}
 @media (min-width:900px){ .band-form .wrap{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); gap:clamp(2rem, 5vw, 5rem); align-items:center} }
 
 /* Contractor application (demo) */
