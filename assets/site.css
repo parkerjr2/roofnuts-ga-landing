@@ -402,24 +402,36 @@ mark.token{background:rgba(229,99,60,.18); color:#8a2f12; padding:.05rem .35rem;
 .review td a{color:var(--link); font-weight:600}
 
 /* ---------- Data-driven city pages ---------- */
-.prose.city{max-width:78ch}
-.cmod{margin-top:2.75rem}
-.cmod:first-child{margin-top:0}
-.cmod > * + *{margin-top:.9rem}
+/* Coverage strip: compact band directly under the hero */
+.cov-strip{padding:.9rem 0; background:var(--surface); border-bottom:1px solid var(--line)}
+.cov-strip .wrap{display:flex; flex-wrap:wrap; align-items:center; gap:.6rem 1.25rem}
+.cov-strip p{font-size:1rem; color:var(--ink)}
+.cov-strip a{color:var(--link); display:inline-flex; align-items:center; min-height:44px; min-width:44px; justify-content:center}
+.cov-strip .zips{list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:.35rem}
+.zips li{font-weight:700; font-size:.92rem; padding:.22rem .6rem; border-radius:999px; background:var(--bg); border:1px solid var(--line); color:var(--ink); font-variant-numeric:tabular-nums}
+
+/* Body uses the same container as the hero. Modules are <section>s, so reset the page-band padding they would inherit. */
+.city-body{padding:clamp(2.25rem, 4vw, 3.75rem) 0 clamp(2.5rem, 5vw, 4.5rem)}
+.prose.city{max-width:none}
+.prose.city .cmod{padding:0; margin-top:clamp(2.5rem, 4vw, 3.75rem)}
+.prose.city .cmod:first-child{margin-top:0}
 .prose .cmod h2{margin-top:0}
-.prose .fine{font-size:.92rem; color:var(--muted)}
-.prose ul.zips{list-style:none; padding:0; display:flex; flex-wrap:wrap; gap:.4rem}
-.zips li{font-weight:700; font-size:.95rem; padding:.3rem .65rem; border-radius:999px; background:var(--surface); border:1px solid var(--line); color:var(--ink); font-variant-numeric:tabular-nums}
+.c-text > * + *, .c-data > * + *{margin-top:.85rem}
+.c-text p{max-width:62ch}
+.prose .fine{font-size:.94rem; color:var(--muted)}
+@media (min-width:960px){
+  .cmod.split{display:grid; grid-template-columns:minmax(0,5fr) minmax(0,7fr); gap:clamp(2rem, 4vw, 3.5rem); align-items:start}
+}
+
 .facts-dl{margin:0; display:grid; gap:0; border-top:1px solid var(--line)}
-.facts-dl > div{display:grid; grid-template-columns:minmax(0,1fr); gap:.2rem; padding:.85rem 0; border-bottom:1px solid var(--line)}
-.facts-dl dt{font-family:var(--font-display); font-weight:700; font-size:1rem; color:var(--ink)}
-.facts-dl dd{margin:0; font-size:1.02rem; color:oklch(0.27 0.025 255)}
+.facts-dl > div{display:grid; grid-template-columns:minmax(0,1fr); gap:.1rem; padding:.35rem 0; border-bottom:1px solid var(--line)}
+.facts-dl dt{font-family:var(--font-display); font-weight:700; font-size:1rem; color:var(--ink); padding-top:.6rem}
+.facts-dl dd{margin:0; font-size:1.02rem; color:oklch(0.27 0.025 255); padding-bottom:.5rem}
 .facts-dl dd a{display:inline-flex; align-items:center; min-height:44px; min-width:44px}
-.facts-dl > div{padding:.35rem 0}
-.facts-dl dt{padding-top:.6rem}
-@media (min-width:700px){ .facts-dl > div{grid-template-columns:12.5rem minmax(0,1fr); gap:1.5rem} .facts-dl dd{padding-top:.1rem} }
+@media (min-width:600px){ .facts-dl > div{grid-template-columns:11rem minmax(0,1fr); gap:1.25rem} .facts-dl dd{padding-top:.1rem} }
+
 /* Year-built bar list: one hue, largest bucket emphasized, value at the tip, text in text tokens */
-.prose ul.bars{list-style:none; padding:0; display:grid; gap:.55rem; max-width:34rem}
+.prose ul.bars{list-style:none; padding:0; display:grid; gap:.55rem; max-width:36rem}
 .bars li{display:grid; grid-template-columns:7.2rem minmax(0,1fr) 2.8rem; gap:.75rem; align-items:center; font-size:.98rem}
 .bars .lab{color:var(--ink); font-weight:600}
 .bars .track{display:block; height:18px}
@@ -427,3 +439,24 @@ mark.token{background:rgba(229,99,60,.18); color:#8a2f12; padding:.05rem .35rem;
 .bars li.top .bar{background:#1565D8}
 .bars .val{color:var(--ink); font-weight:700; font-variant-numeric:tabular-nums; text-align:right}
 .bars li.top .lab, .bars li.top .val{font-weight:800}
+
+/* Questions */
+.qa-grid{display:grid; grid-template-columns:minmax(0,1fr); gap:1.25rem; margin-top:1rem}
+.qa-grid h3{margin-top:0}
+.qa-grid p{margin-top:.4rem}
+@media (min-width:860px){ .qa-grid.multi{grid-template-columns:repeat(2, minmax(0,1fr)); gap:1.5rem 3rem} }
+.qa-grid p{max-width:62ch}
+
+/* Closing panel */
+.prose.city .close-panel{background:var(--navy); color:var(--on-navy); border-radius:var(--radius-lg); padding:clamp(1.5rem, 3vw, 2.5rem); display:grid; grid-template-columns:minmax(0,1fr); gap:1.25rem; align-items:center}
+.prose .close-panel h2{color:white; font-size:clamp(1.4rem, 1.1rem + 1.2vw, 2rem)}
+.prose .close-panel p{color:var(--on-navy-muted); margin-top:.6rem; max-width:52ch}
+.prose .close-panel .btn{color:var(--yellow-ink); text-decoration:none; justify-self:start; font-size:1.05rem}
+@media (min-width:860px){ .prose.city .close-panel{grid-template-columns:minmax(0,1fr) auto; gap:2.5rem} }
+
+/* Related resources */
+.prose.city .related{display:grid; grid-template-columns:minmax(0,1fr); gap:1.5rem; margin-top:clamp(2rem, 3vw, 2.75rem)}
+.related h2{font-size:1.05rem; color:var(--muted)}
+.prose .related ul{list-style:none; padding:0; margin-top:.35rem; display:flex; flex-wrap:wrap; gap:0 1.5rem}
+.related a{display:inline-flex; align-items:center; min-height:44px; font-weight:600}
+@media (min-width:700px){ .prose.city .related{grid-template-columns:repeat(2, minmax(0,1fr)); gap:3rem} }
