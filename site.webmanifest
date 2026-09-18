@@ -1,0 +1,20 @@
+{
+ "name": "RoofNuts Georgia",
+ "short_name": "RoofNuts",
+ "start_url": "/roofnuts-ga-landing/",
+ "display": "browser",
+ "background_color": "#031B31",
+ "theme_color": "#031B31",
+ "icons": [
+  {
+   "src": "/roofnuts-ga-landing/favicon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "/roofnuts-ga-landing/favicon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  }
+ ]
+}
