@@ -476,3 +476,22 @@ mark.token{background:rgba(229,99,60,.18); color:#8a2f12; padding:.05rem .35rem;
 
 /* Phones: breathing room between an explanation and its data */
 @media (max-width:959px){ .cmod.split .c-data{margin-top:1.1rem} }
+
+/* Hero storm line: one dated, sourced fact that links to the storm section */
+.storm-hook{margin-top:1.1rem; display:flex; gap:.7rem; align-items:flex-start; text-decoration:none; color:var(--on-navy); background:rgba(255,196,0,.10); border:1px solid rgba(255,196,0,.45); border-radius:var(--radius); padding:.75rem .9rem; font-size:.98rem; line-height:1.45; max-width:36rem; min-height:44px; transition:background .25s var(--ease)}
+.storm-hook:hover{background:rgba(255,196,0,.18)}
+.storm-hook svg{flex:none; color:var(--yellow); margin-top:2px}
+.storm-hook strong{color:var(--yellow)}
+.storm-hook u{text-underline-offset:3px; white-space:nowrap}
+.prose.city .cmod{scroll-margin-top:calc(var(--header-h) + 16px)}
+
+/* City hero: on phones the form comes right after one short sentence, and the storm line follows the form.
+   On wide screens the storm line sits under the intro, beside the form. */
+.only-narrow{display:block} .only-wide{display:none}
+.page-hero .wrap.g3{grid-template-areas:"text" "form" "hook"}
+.g3 > .h-text{grid-area:text} .g3 > form{grid-area:form} .g3 > .storm-hook{grid-area:hook; margin-top:0; max-width:none}
+@media (min-width:900px){
+  .only-narrow{display:none} .only-wide{display:block}
+  .page-hero.with-form .wrap.g3{grid-template-areas:"text form" "hook form"; grid-template-rows:auto 1fr; row-gap:1.25rem}
+  .g3 > .storm-hook{align-self:start; max-width:36rem}
+}
